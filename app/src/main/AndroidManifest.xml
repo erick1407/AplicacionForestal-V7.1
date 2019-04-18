@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.erick.aplicacionforestal">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".HuberActivity"
+            android:label="@string/app_name_huber" />
+        <activity
+            android:name=".SimpsonActivity"
+            android:label="@string/app_name_simpson" />
+        <activity
+            android:name=".NewtonActivity"
+            android:label="@string/app_name_newton" />
+        <activity
+            android:name=".HeyerActivity"
+            android:label="@string/app_name_heyer" />
+        <!-- android:parentActivityName=".MainActivity"/> -->
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".InformationActivity"
+            android:label="@string/app_name_info" />
+        <activity
+            android:name=".ViewPDFActivityHuber"
+            android:label="@string/app_name_phub" />
+        <activity
+            android:name=".ViewPDFNewtonActivity"
+            android:label="@string/app_name_newton" />
+        <activity
+            android:name=".ViewPDFSimpsonActivity"
+            android:label="@string/app_name_psim" />
+        <activity
+            android:name=".ViewPDFHeyerActivity"
+            android:label="@string/app_name_phey" />
+        <activity
+            android:name=".DatosInformeActivity"
+            android:label="@string/app_name_date" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_login" />
+        <activity
+            android:name=".ResHubActivity"
+            android:label="@string/app_name_resHu" />
+        <activity
+            android:name=".ResHeyActivity"
+            android:label="@string/app_name_resHe" />
+        <activity
+            android:name=".ResNewActivity"
+            android:label="@string/app_name_resNe" />
+        <activity android:name=".ResSimActivity" android:label="@string/app_name_resSi"></activity>
+    </application>
+
+</manifest>

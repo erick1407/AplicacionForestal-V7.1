@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewtonActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Cálculo del volumen de un fuste por la fórmula de Newton."
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/meter"/>
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:id="@+id/spinnerunidaesNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog"
+                    app:ms_arrowColor="#8FDE32"
+                    app:ms_arrowSize="16dp"
+                    app:ms_floatingLabelColor="@color/colorPrimaryDark"
+                    app:ms_floatingLabelText="Unidad Seleccionada"
+                    app:ms_hint="Unidades de Medida"
+                    app:ms_hintColor="#8FDE32"
+                    app:ms_multiline="true" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Diámetro 1:"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual"
+                android:textColor="@color/colorSecondaryText"
+                android:gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/diameter"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/implongitude">
+
+                    <EditText
+                        android:id="@+id/editTextD1N"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Ingrese Medída del Diámetro"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/capsuletext"
+                        android:textSize="15sp"
+                        android:textStyle="bold|italic"
+                        app:fontFamily="casual"
+                        android:gravity="center"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Diámetro 2:"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual"
+                android:textColor="@color/colorSecondaryText"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/diametert"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/implongitudess">
+
+                    <EditText
+                        android:id="@+id/editTextD2N"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Ingrese Medída del Diámetro"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/capsuletext"
+                        android:textSize="15sp"
+                        android:textStyle="bold|italic"
+                        app:fontFamily="casual"
+                        android:gravity="center"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Longitud de la Troza:"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual"
+                android:textColor="@color/colorSecondaryText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/longi"/>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/implongi">
+
+                    <EditText
+                        android:id="@+id/editTextLonN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Ingrese la Longitud"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/capsuletext"
+                        android:textSize="15sp"
+                        android:textStyle="bold|italic"
+                        app:fontFamily="casual"
+                        android:gravity="center"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <Button
+                android:id="@+id/buttonCal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calcular"
+                android:onClick="calcularNe"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:background="@drawable/capsulebutton"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textViewLon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

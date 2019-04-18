@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SimpsonActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="El número diámetros debe ser impar."
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/meter"/>
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:id="@+id/spinnerunidaesSim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:spinnerMode="dialog"
+                    app:ms_arrowColor="#8FDE32"
+                    app:ms_arrowSize="16dp"
+                    app:ms_floatingLabelColor="@color/colorPrimaryDark"
+                    app:ms_floatingLabelText="Unidad Seleccionada"
+                    app:ms_hint="Unidades de Medida"
+                    app:ms_hintColor="#8FDE32"
+                    app:ms_multiline="true"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Diámetros de cada sección."
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/diameter"/>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/impdiametros">
+
+                    <EditText
+                        android:id="@+id/editTextDiam"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:hint="Ingresar Datos Separados por (coma ' , ')"
+                        android:inputType="text|numberSigned"
+                        android:background="@drawable/capsuletext"
+                        app:fontFamily="casual"
+                        android:textSize="15sp"
+                        android:textStyle="bold|italic"
+                        android:gravity="center"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Longitud:"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/longi"/>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/implongitudes">
+
+                    <EditText
+                        android:id="@+id/editTextLongi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textSize="15sp"
+                        android:hint="Ingrese la Longitud"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/capsuletext"
+                        app:fontFamily="casual"
+                        android:textStyle="bold|italic"
+                        android:gravity="center"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calcular"
+                android:background="@drawable/capsulebutton"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:id="@+id/button1"
+                android:onClick="calcularSi" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

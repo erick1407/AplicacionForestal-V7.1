@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InformationActivity"
+    android:background="@color/backgroundcolor">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cubicación Movil"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                android:layout_margin="7dp"
+                app:fontFamily="casual" />
+
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:src="@drawable/bosque"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.- ¿Para Qué Sirve esta APP?"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="@color/colorPrimaryDark"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Para realizar cálculos de cubicación de madera de manera que se puedan obtener resultados sin consultar un simulador en Internet de los métodos que se encuentran en esta aplicación."
+                android:gravity="center"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="14sp"
+                android:layout_margin="7dp"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mediante esta aplicación se encuentran las Formulas más Utilizadas (Huber, Newton, Simpson, Heyer)."
+                android:gravity="center"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:layout_margin="7dp"
+                app:fontFamily="casual" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2.- ¿A Quiénes Va Dirigida?"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="@color/colorPrimaryDark"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Para profesionistas de la rama de Ciencias de Ingeniería Forestal que quieran realizar sus cálculos de cubicación de maderas y se encuentren en un lugar sin acceso a internet."
+                android:gravity="center"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:layout_margin="7dp"
+                app:fontFamily="casual" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

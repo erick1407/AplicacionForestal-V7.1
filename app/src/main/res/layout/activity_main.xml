@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundcolor"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cubicación de Fustes y Trozas"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/bankcardId1"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:onClick="heyer"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/fondoheyer"
+                            android:src="@drawable/ic_operaciones"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Metodo de Heyer"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Aplicar el metodo de heyer"
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/bankcardId333"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:onClick="huber"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/fondohuber"
+                            android:src="@drawable/ic_operaciones"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Metodo de Huber"/>
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Aplicar el metodo de Huber"
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/bankcardId"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:onClick="simpson"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/fondosimpson"
+                            android:src="@drawable/ic_operaciones"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Metodo de Simpson"/>
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Aplicar el metodo de Simpson"
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:onClick="newton"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/fondonewton"
+                            android:src="@drawable/ic_operaciones"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Metodo de Newton"/>
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Aplicar el metodo de Newton"
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La cubicación se refiere a la determinación la capacidad o volumen de un cuerpo a partir de sus dimensiones."
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="De manera particular para obtener el volumen de fustes o troncos de los árboles, deben dividirse o suponer que se dividen en trozas (secciones) de igual o diferente longitud para entonces cubicarlas por separado (Romahn y Ramírez, 2010)."
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_alignParentTop="true" />
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/pager"
+                    android:layout_alignParentStart="true"
+                    android:gravity="bottom"
+                    android:padding="10dip"
+                    app:centered="true"
+                    app:fillColor="@color/colorAccent"
+                    app:pageColor="#fff"
+                    app:snap="false"
+                    android:layout_alignParentLeft="true" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Para cubicaciones comerciales de fustes o de trozas, se han desarrollado procedimientos que a continuación se describen con diferentes grados de precisión, entre las que se encuentran las fórmulas de Huber, Newton, Kuntze y Heyer (también conocida como Simpson) (Romahn y Ramírez, 2010)."
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Método de Huber."
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Una de las fórmulas más sencillas es la de Huber modificada, la cual requiere el conocimiento de los diámetros D_0 y D_1 así como la longitud L entre esas secciones, como se muestra en la figura 1."
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/figura1"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="De esta forma el volumen de la troza está dada por la expresión."
+
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/expresion1"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Método de Newton."
+
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La fórmula de Newton puede aplicarse a un mayor número de cuerpos geométricos. De manera particular para una troza en la que se conocen los diámetros D_0 y D_1 así como la longitud L entre esas secciones (figura 2), se tiene que,"
+
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/expresion2"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="donde,"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/expresion3"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/figura22"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Método de Simpson"
+
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La fórmula de Simpson supone dividir el fuste en un número par n de trozas de igual longitud L. Las áreas determinadas por estas secciones se denotan por S_1,S_2,…,S_n,S_(n+1), como se muestra en la figura 3."
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/figura3"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El volumen está dado por,"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/expresion4"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El área de cada sección está dada por,"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/expresion5"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En esta parte, el usuario ingresa los valores de los diámetros de las secciones separados por coma (debe validarse que el número de diámetros ingresados sea impar)."
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Método de Heyer"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La fórmula de Heyer no necesariamente implica la división del fuste en secciones de igual longitud. Si se divide el fuste en n secciones, las áreas determinadas por estas secciones se denotan por S_1,S_2,…,S_n,S_(n+1)."
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La sección 1 está determinada por las áreas S_1 y S_2, la sección 2 por S_2 y S_3, y así sucesivamente. Si estas secciones tienen diferente longitud L_1,L_2,…,L_n, entonces el volumen está dado por,"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/expresion6"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="donde,"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/expresion7"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El usuario ingresa el diámetro que determina cada sección separadas por coma, así como la longitud de cada sección (también separadas por coma). La longitud del array de los diámetros debe ser uno más que la longitud del array de las longitudes."
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Si cada una de las secciones son de igual longitud L, entonces el volumen está dado por"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/expresion8"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ITESPE-CA-2, RSL / EAV, 2018"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Referencias"
+
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Romahn V. C. F. y Ramírez M. H., Dendometría, Universidad Autónoma Chapingo, 2010."
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="34dp"
+
+        android:layout_marginEnd="11dp"
+        app:fab_addButtonColorPressed="#FFFFFF"
+        app:fab_labelStyle="@style/menu_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginRight="11dp"
+        android:layout_alignParentRight="true">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+
+            android:id="@+id/PEDIDOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#48fc7e"
+            app:fab_colorPressed="#ffffff"
+            app:fab_icon="@drawable/folder"
+            app:fab_size="mini"
+            android:onClick="openFolder"
+            app:fab_title="Carpeta de PDF's" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>-->
+
+
+
+</RelativeLayout>

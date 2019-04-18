@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/UploadSi"
+        android:title="Enviar Registros"
+        app:showAsAction="ifRoom"
+        android:onClick="syncSi"
+        android:icon="@drawable/subir"/>
+
+    <item
+        android:id="@+id/DeleteSi"
+        android:title="Eliminar Registros"
+        app:showAsAction="ifRoom"
+        android:iconTint="#FFFFFF"
+        android:onClick="deleteSi"
+        android:icon="@drawable/trash"/>
+</menu>

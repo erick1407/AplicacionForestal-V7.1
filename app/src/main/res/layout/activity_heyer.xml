@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HeyerActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="El número de diámetros debe ser uno más que el de longitudes."
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                android:textColor="@android:color/secondary_text_light"
+                app:fontFamily="casual" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/meter"/>
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:id="@+id/spinnerunidaes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:spinnerMode="dialog"
+                    app:ms_arrowColor="#8FDE32"
+                    app:ms_arrowSize="16dp"
+                    app:ms_floatingLabelColor="@color/colorPrimaryDark"
+                    app:ms_floatingLabelText="Unidad Seleccionada"
+                    app:ms_hint="Unidades de Medida"
+                    app:ms_hintColor="#8FDE32"
+                    app:ms_multiline="true"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Diámetros de cada sección:"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorSecondaryText"
+                app:fontFamily="casual" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/diameter"/>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/impdiametros">
+
+                    <EditText
+                        android:id="@+id/editTextDiams"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/capsuletext"
+                        android:hint="Ingresar Datos Separados por (' , ' coma)"
+                        android:inputType="text|numberSigned"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:textStyle="bold|italic"
+                        app:fontFamily="casual"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+            
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="15dp" />
+            
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Establecer el mismo diametro para todas las secciones"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/secondary_text_light"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:text="Longitudes de cada sección:"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorSecondaryText"
+                app:fontFamily="casual" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/longi"/>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/implongitudes">
+
+                    <EditText
+                        android:id="@+id/editTextLons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Ingresar Datos Separados por (' , ' coma)"
+                        android:inputType="text|numberSigned"
+                        android:background="@drawable/capsuletext"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:textStyle="bold|italic"
+                        app:fontFamily="casual"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonCalH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calcular"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:fontFamily="casual"
+                android:onClick="heyerValidado"
+                android:background="@drawable/capsulebutton"
+                style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

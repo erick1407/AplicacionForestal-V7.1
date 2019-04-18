@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Cubicación Móvil</string>
+    <string name="app_login">Iniciar Sesión</string>
+    <string name="app_name_huber">Método de Huber</string>
+    <string name="app_name_simpson">Método de Simpson</string>
+    <string name="app_name_newton">Método de Newton</string>
+    <string name="app_name_heyer">Método de Heyer</string>
+    <string name="app_name_info">Información</string>
+    <string name="app_name_phub">PDF Generado Método de Huber</string>
+    <string name="app_name_psim">PDF Generado Método de Simpson</string>
+    <string name="app_name_pnew">PDF Generado Método de Newton</string>
+    <string name="app_name_phey">PDF Generado Método de Heyer</string>
+    <string name="app_name_date">Datos del Informe</string>
+    <string name="app_name_resHu">Registros Huber Modificada</string>
+    <string name="app_name_resHe">Registros Heyer</string>
+    <string name="app_name_resNe">Registros Newton</string>
+    <string name="app_name_resSi">Registros Simpson</string>
+</resources>
