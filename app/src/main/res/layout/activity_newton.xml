@@ -92,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="Ingrese Medída del Diámetro"
+                        android:hint="Ingrese medída del diámetro"
                         android:inputType="numberDecimal"
                         android:background="@drawable/capsuletext"
                         android:textSize="15sp"
@@ -101,15 +101,11 @@
                         android:gravity="center"/>
                 </android.support.design.widget.TextInputLayout>
 
-
-
             </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
-
-
 
             <TextView
                 android:id="@+id/textView3"
@@ -145,7 +141,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="Ingrese Medída del Diámetro"
+                        android:hint="Ingrese medída del diámetro"
                         android:inputType="numberDecimal"
                         android:background="@drawable/capsuletext"
                         android:textSize="15sp"
@@ -168,7 +164,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Longitud de la Troza:"
+                android:text="Longitud de la troza:"
                 android:textSize="18sp"
                 android:textStyle="bold|italic"
                 app:fontFamily="casual"
@@ -194,7 +190,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="Ingrese la Longitud"
+                        android:hint="Ingrese la longitud"
                         android:inputType="numberDecimal"
                         android:background="@drawable/capsuletext"
                         android:textSize="15sp"

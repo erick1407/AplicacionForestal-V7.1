@@ -82,7 +82,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/capsuletext"
-                        android:hint="Ingresar Datos Separados por (' , ' coma)"
+                        android:hint="Ingresar datos separados por (' , ' coma)"
                         android:inputType="text|numberSigned"
                         android:textSize="15sp"
                         android:gravity="center"
@@ -100,7 +100,7 @@
                 android:id="@+id/checkBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Establecer el mismo diametro para todas las secciones"
+                android:text="Establecer el mismo diámetro para todas las secciones"
                 android:textColor="@color/colorSecondaryText"
                 android:textStyle="bold" />
 
@@ -143,7 +143,7 @@
                         android:id="@+id/editTextLons"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Ingresar Datos Separados por (' , ' coma)"
+                        android:hint="Ingresar datos separados por (' , ' coma)"
                         android:inputType="text|numberSigned"
                         android:background="@drawable/capsuletext"
                         android:textSize="15sp"

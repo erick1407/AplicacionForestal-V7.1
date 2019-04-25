@@ -40,10 +40,10 @@ public class HuberAdaptador extends RecyclerView.Adapter<HuberAdaptador.ViewHold
     @Override
     public void onBindViewHolder(HuberAdaptador.ViewHolder holder, int position) {
         holder.vol.setText("Volumen: " +huberModelList.get(position).getVol());
-        holder.di1.setText("Diametro 1: " + huberModelList.get(position).getDia1());
-        holder.di2.setText("Diametro 2: " + huberModelList.get(position).getDia2());
+        holder.di1.setText("Diámetro 1: " + huberModelList.get(position).getDia1());
+        holder.di2.setText("Diámetro 2: " + huberModelList.get(position).getDia2());
         holder.lon.setText("Longitud: " + huberModelList.get(position).getLon());
-        holder.uni.setText("Unidad de Medida: "+ huberModelList.get(position).getUni());
+        holder.uni.setText("Unidad de medida: "+ huberModelList.get(position).getUni());
     }
 
     @Override

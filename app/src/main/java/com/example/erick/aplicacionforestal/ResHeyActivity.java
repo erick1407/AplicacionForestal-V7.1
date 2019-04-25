@@ -60,7 +60,7 @@ public class ResHeyActivity extends AppCompatActivity {
         //llenado();
         llenar();
         prgDialog = new ProgressDialog(this);
-        prgDialog.setMessage("Sincronizando Registros de SQLite con Servidor MariaDB. Espere Por Favor...!!!");
+        prgDialog.setMessage("Sincronizando registros de SQLite con Servidor MariaDB. Espere por favor...!!!");
         prgDialog.setCancelable(false);
     }
 
@@ -72,7 +72,7 @@ public class ResHeyActivity extends AppCompatActivity {
 
     public void sync(MenuItem menuItem){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("¿Desea Enviar los Registros al Servidor?");
+        builder.setMessage("¿Desea enviar los registros al servidor?");
         builder.setIcon(R.drawable.sync);
         builder.setTitle("Confirmar");
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
@@ -93,9 +93,9 @@ public class ResHeyActivity extends AppCompatActivity {
 
     public void deleteHe(MenuItem menuItem){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("¿Desea Eliminar los Registros Guardados?");
+        builder.setMessage("¿Desea eliminar los registros guardados?");
         builder.setIcon(R.drawable.question);
-        builder.setTitle("Eliminar Registros");
+        builder.setTitle("Eliminar registros");
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -118,7 +118,7 @@ public class ResHeyActivity extends AppCompatActivity {
         sqLiteDatabase.execSQL("DELETE FROM Heyer");
         sqLiteDatabase.close();
         llenar();
-        Dialog.show(this, "Cálculos Eliminados","Los Cálculos han sido eliminados", R.drawable.sucess);
+        Dialog.show(this, "Cálculos eliminados","Los cálculos han sido eliminados", R.drawable.sucess);
     }
 
     public void comprobarConexion(){
@@ -126,18 +126,18 @@ public class ResHeyActivity extends AppCompatActivity {
         NetworkInfo info_wifi = connectivity.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         NetworkInfo info_datos = connectivity.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         if (String.valueOf(info_wifi.getState()).equals("CONNECTED")){
-            Snackbar snackbar = Snackbar.make(findViewById(R.id.layoutHe),"Estas Conectado al WIFI, UD Puede Enviar el Registro al Servidor", Snackbar.LENGTH_LONG).setAction("Action", null);
+            Snackbar snackbar = Snackbar.make(findViewById(R.id.layoutHe),"Estas conectado al WIFI, UD puede enviar el registro al Servidor", Snackbar.LENGTH_LONG).setAction("Action", null);
             View sbView = snackbar.getView();
             sbView.setBackgroundColor(Color.parseColor("#008744"));
             snackbar.show();
         }else{
             if(String.valueOf(info_datos.getState()).equals("CONNECTED")) {
-                Snackbar snackbar = Snackbar.make(findViewById(R.id.layoutHe),"Estas Conectado a los Datos Moviles del Telefono, Le Recomiendo usar WIFI", Snackbar.LENGTH_LONG).setAction("Action", null);
+                Snackbar snackbar = Snackbar.make(findViewById(R.id.layoutHe),"Estas conectado a los Datos Móviles del teléfono, le recomiendo usar WIFI", Snackbar.LENGTH_LONG).setAction("Action", null);
                 View sbView = snackbar.getView();
                 sbView.setBackgroundColor(Color.parseColor("#FFA700"));
                 snackbar.show();
             }else{
-                Snackbar snackbar = Snackbar.make(findViewById(R.id.layoutHe),"Ups!, No estas Conectado a Internet", Snackbar.LENGTH_LONG).setAction("Action", null);
+                Snackbar snackbar = Snackbar.make(findViewById(R.id.layoutHe),"Ups!, No estas conectado a internet", Snackbar.LENGTH_LONG).setAction("Action", null);
                 View sbView = snackbar.getView();
                 sbView.setBackgroundColor(Color.parseColor("#D62D20"));
                 snackbar.show();
@@ -170,7 +170,7 @@ public class ResHeyActivity extends AppCompatActivity {
                         if (response.contains("1")){
                             syncSQLiteMySQLDB();
                         }else {
-                            Snackbar snackbar = Snackbar.make(findViewById(R.id.layoutHe),"Las Credenciales No Coinciden", Snackbar.LENGTH_LONG).setAction("Action", null);
+                            Snackbar snackbar = Snackbar.make(findViewById(R.id.layoutHe),"Las credenciales no coinciden", Snackbar.LENGTH_LONG).setAction("Action", null);
                             View sbView = snackbar.getView();
                             sbView.setBackgroundColor(Color.RED);
                             snackbar.show();
@@ -179,7 +179,7 @@ public class ResHeyActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Snackbar snackbar = Snackbar.make(findViewById(R.id.layoutHe),"No estas Conectado a Internet o el Servidor no Responde, Intente mas tarde.", Snackbar.LENGTH_LONG).setAction("Action", null);
+                Snackbar snackbar = Snackbar.make(findViewById(R.id.layoutHe),"No estas conectado a Internet o el servidor no tesponde. Intente mas tarde.", Snackbar.LENGTH_LONG).setAction("Action", null);
                 View sbView = snackbar.getView();
                 sbView.setBackgroundColor(Color.RED);
                 snackbar.show();
@@ -220,7 +220,7 @@ public class ResHeyActivity extends AppCompatActivity {
                                 System.out.println(obj.get("status"));
                                 controller.updateSyncStatusHe(obj.get("id").toString(),obj.get("status").toString());
                             }
-                            Dialog.show(ResHeyActivity.this,"Sincronización Completada!", "Los Datos ya estan en el Servidor", R.drawable.sucess);
+                            Dialog.show(ResHeyActivity.this,"Sincronización completada!", "Los datos ya estan en el Servidor", R.drawable.sucess);
                         } catch (JSONException e) {
                             // TODO Auto-generated catch block
                             Dialog.show(ResHeyActivity.this,"Error", "Ocurrió un error [¡La Estructura del servidor JSON podría no ser válida]!", R.drawable.fail);
@@ -233,19 +233,19 @@ public class ResHeyActivity extends AppCompatActivity {
                         // TODO Auto-generated method stub
                         prgDialog.hide();
                         if(statusCode == 404){
-                            Dialog.show(ResHeyActivity.this,"Error 404", "Recurso Solicitado No Encontrado", R.drawable.errorcu);
+                            Dialog.show(ResHeyActivity.this,"Error 404", "Recurso solicitado No Encontrado", R.drawable.errorcu);
                         }else if(statusCode == 500){
-                            Dialog.show(ResHeyActivity.this,"Error en el Servidor", "Algo anda mal en el Servidpr", R.drawable.servererror);
+                            Dialog.show(ResHeyActivity.this,"Error en el Servidor", "Algo anda mal en el Servidor", R.drawable.servererror);
                         }else {
                             Dialog.show(ResHeyActivity.this, "Error", "¡Ocurrió un error Inesperado!, Tal vez el dispositivo podría no estar conectado a Internet o se perdio la Conexion a Internet", R.drawable.nowifi);
                         }
                     }
                 });
             }else{
-                Dialog.show(ResHeyActivity.this,"Nada para Enviar", "No es Necesario SQLite y MariaDB ya estan Sincronizados!", R.drawable.databasesy);
+                Dialog.show(ResHeyActivity.this,"Nada para enviar", "No es necesario SQLite y MariaDB ya estan sincronizados!", R.drawable.databasesy);
             }
         }else{
-            Dialog.show(ResHeyActivity.this,"No hay Registros en SQLite", "Guarde un Registro para poder Sincronizar", R.drawable.databaseem);
+            Dialog.show(ResHeyActivity.this,"No hay registros en SQLite", "Guarde un registro para poder sincronizar", R.drawable.databaseem);
         }
     }
 

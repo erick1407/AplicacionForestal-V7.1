@@ -37,10 +37,10 @@ public class SimpsonAdaptador extends RecyclerView.Adapter<SimpsonAdaptador.View
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.vol.setText("Volumen: "+ simpsonModelList.get(position).getVol());
         holder.dias.setText("Diametros de C/Seccion: " + simpsonModelList.get(position).getDias());
         holder.lon.setText("Longitud: " + simpsonModelList.get(position).getLon());
-        holder.uni.setText("Unidad: " + simpsonModelList.get(position).getUnidad());
-        holder.vol.setText("Volumen: "+ simpsonModelList.get(position).getVol());
+        holder.uni.setText("Unidad de medida: " + simpsonModelList.get(position).getUnidad());
     }
 
     @Override

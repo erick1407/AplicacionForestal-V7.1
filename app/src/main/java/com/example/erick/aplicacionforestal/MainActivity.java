@@ -1,6 +1,5 @@
 package com.example.erick.aplicacionforestal;
 
-import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -12,7 +11,6 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -20,9 +18,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
 
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -41,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<ImageModel> imageModelArrayList;
 
     private int[] myImageList = new int[]{R.drawable.slide1, R.drawable.slide2, R.drawable.slide3, R.drawable.slide4, R.drawable.slide5, R.drawable.slide6, R.drawable.slide7, R.drawable.slide8};
-    //ViewFlipper viewFlipper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     private void cargardialogorecomendacion() {
 
         AlertDialog.Builder dialogo=new AlertDialog.Builder(MainActivity.this);
-        dialogo.setTitle("Permisos Desactivados");
+        dialogo.setTitle("Permisos desactivados");
         dialogo.setIcon(R.drawable.warning);
         dialogo.setMessage("Debe aceptar los permisos para el correcto funcionamiento de la App, los permisos son utilizados para poder generar correctamente el documento PDF");
 
@@ -131,8 +127,6 @@ public class MainActivity extends AppCompatActivity {
         dialogo.show();
     }
     //============================TERMINA VALIDACION DE PERMISOS
-
-
 
 
     private void logout() {
@@ -164,8 +158,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void cerrarSes (MenuItem item){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Cerrar Sesión");
-        builder.setMessage("¿Desea Cerrar Sesión?\n\nAl cerrar sesión se eliminaran los registros de los cálculos realizados\n\nRecomendamos que sincronizar los datos antes de cerrar sesión");
+        builder.setTitle("Cerrar sesión");
+        builder.setMessage("¿Desea cerrar sesión?\n\nAl cerrar sesión se eliminarán los registros de los cálculos realizados\n\nRecomendamos sincronizar los datos antes de cerrar sesión");
         builder.setIcon(R.drawable.question);
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
@@ -222,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Salir");
         builder.setIcon(R.drawable.warning);
-        builder.setMessage("¿Desea Salir de la Aplicación?");
+        builder.setMessage("¿Desea salir de la aplicación?");
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

@@ -34,7 +34,7 @@ public class DatosInformeActivity extends AppCompatActivity {
 
     public void updateNombre(View view){
         if (editTextNombre.getText().toString().isEmpty()){
-            Snackbar snackbar = Snackbar.make(view,"Ingrese Nombre de quien Realizara los calculos", Snackbar.LENGTH_LONG).setAction("Action", null);
+            Snackbar snackbar = Snackbar.make(view,"Ingrese nombre de quien realizara los cálculos", Snackbar.LENGTH_LONG).setAction("Action", null);
             View sbView = snackbar.getView();
             sbView.setBackgroundColor(Color.RED);
             snackbar.show();
@@ -44,9 +44,9 @@ public class DatosInformeActivity extends AppCompatActivity {
             if (nombre.matches(nombrePattern) && nombre.length()>0){
                 update();
                 onBackPressed();
-                Toast.makeText(this, "Los Datos del Informe se han modificado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Los datos del informe se han modificado", Toast.LENGTH_SHORT).show();
             }else {
-                Dialog.show(this,"Ups...!", "El Nombre o la abreviatura del Grado de Estudios son Incorrectos \n\nEjemplo:\nIng. Juan Salas Solo", R.drawable.fail);
+                Dialog.show(this,"Ups...!", "El nombre o la abreviatura del grado de estudios son incorrectos\n\nEjemplo:\nIng. Juan Salas Solo", R.drawable.fail);
             }
         }
     }

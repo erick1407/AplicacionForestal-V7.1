@@ -37,9 +37,9 @@ public class HeyerAdaptador extends RecyclerView.Adapter<HeyerAdaptador.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.vol.setText("Volumen: "+ heyerModelList.get(position).getVol());
-        holder.diams.setText("Diametro(s): "+heyerModelList.get(position).getDias());
+        holder.diams.setText("Diámetro(s): "+heyerModelList.get(position).getDias());
         holder.longs.setText("Longitudes: "+ heyerModelList.get(position).getLongs());
-        holder.unidad.setText("Unidad: "+heyerModelList.get(position).getUnidad());
+        holder.unidad.setText("Unidad de medida: "+heyerModelList.get(position).getUnidad());
     }
 
     @Override

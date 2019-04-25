@@ -47,19 +47,19 @@ public class LoginActivity extends AppCompatActivity {
 
     public void login(final View view){
         if (numerousuario.getText().toString().isEmpty()){
-            Snackbar snackbar = Snackbar.make(view,"Ingrese Número de Usuario", Snackbar.LENGTH_LONG).setAction("Action", null);
+            Snackbar snackbar = Snackbar.make(view,"Ingrese número de usuario", Snackbar.LENGTH_LONG).setAction("Action", null);
             View sbView = snackbar.getView();
             sbView.setBackgroundColor(Color.RED);
             snackbar.show();
         }else{
             if (password.getText().toString().isEmpty()){
-                Snackbar snackbar = Snackbar.make(view,"Ingrese su Contraseña", Snackbar.LENGTH_LONG).setAction("Action", null);
+                Snackbar snackbar = Snackbar.make(view,"Ingrese su contraseña", Snackbar.LENGTH_LONG).setAction("Action", null);
                 View sbView = snackbar.getView();
                 sbView.setBackgroundColor(Color.RED);
                 snackbar.show();
             }else {
                 if (nombreInforme.getText().toString().isEmpty()){
-                    Snackbar snackbar = Snackbar.make(view,"Ingrese Nombre de quien Realizara los calculos", Snackbar.LENGTH_LONG).setAction("Action", null);
+                    Snackbar snackbar = Snackbar.make(view,"Ingrese nombre de quien realizara los cálculos", Snackbar.LENGTH_LONG).setAction("Action", null);
                     View sbView = snackbar.getView();
                     sbView.setBackgroundColor(Color.RED);
                     snackbar.show();
@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
                                             finish();
                                         }else {
-                                            Snackbar snackbar = Snackbar.make(view,"Usuario o Contraseña Incorrectos", Snackbar.LENGTH_LONG).setAction("Action", null);
+                                            Snackbar snackbar = Snackbar.make(view,"Usuario o Contraseña incorrectos", Snackbar.LENGTH_LONG).setAction("Action", null);
                                             View sbView = snackbar.getView();
                                             sbView.setBackgroundColor(Color.RED);
                                             snackbar.show();
@@ -103,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         Volley.newRequestQueue(this).add(request);
                     }else {
-                        Dialog.show(this,"Ups...!", "El Nombre o la abreviatura del Grado de Estudios son Incorrectos \n\nEjemplo:\nIng. Juan Salas Solo\nó tambien si solo es un obrero usted:\nC. Juan Solo Salas", R.drawable.fail);
+                        Dialog.show(this,"Ups...!", "El nombre o la abreviatura del grado de estudios son incorrectos\n\nEjemplo:\nIng. Juan Salas Solo\nó tambien si solo es un obrero usted:\nC. Juan Solo Salas", R.drawable.fail);
                     }
                 }
             }

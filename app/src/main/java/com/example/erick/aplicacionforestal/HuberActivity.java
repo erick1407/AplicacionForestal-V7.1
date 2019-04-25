@@ -59,8 +59,6 @@ public class HuberActivity extends AppCompatActivity {
     private TemplatePDFHuber templatePDF;
     MaterialSpinner spinnerUnidadesHu;
     private String[] header ={"Diámetro 1", "Diámetro 2", "Longitud de la Toza", "Volumen"};
-    private String shortText = "Hola Mundo";
-    private String longText = "Nunca consideres el estudio como una obligación sino como una oportunidad para adentrate en el bello y maravilloso mundo del saber";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -177,7 +175,7 @@ public class HuberActivity extends AppCompatActivity {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Generar PDF");
                 builder.setIcon(R.drawable.pdf);
-                builder.setMessage("¿Desea Generar Archivo PDF de los Resultados?");
+                builder.setMessage("¿Desea generar archivo PDF de los resultados?");
                 builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
@@ -268,7 +266,7 @@ public class HuberActivity extends AppCompatActivity {
         templatePDF.addParagraph("\n");
         templatePDF.addParagraph("\n");
         templatePDF.addTitles("Método de Huber","Cálculo del volumen de un fuste por la fórmula de Huber modificada.",fecha, hora);
-        templatePDF.addParagraph("Cálculos Realizados Por: " + nombreInforme);
+        templatePDF.addParagraph("Cálculos realizados por: " + nombreInforme);
         templatePDF.createTable(header,getClients());
         templatePDF.addParagraphResu("ATENTAMENTE");
         templatePDF.addParagraphCenter("___________________________________________________________");
@@ -321,7 +319,7 @@ public class HuberActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setIcon(R.drawable.warning);
         builder.setTitle("Regresar al Menu");
-        builder.setMessage("¿Desea Regresar al Menu Principal y no Realizar el Cálculo?");
+        builder.setMessage("¿Desea regresar al menu principal y no realizar el cálculo?");
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -353,7 +351,7 @@ public class HuberActivity extends AppCompatActivity {
         numHu = editTextNumHu.getText().toString();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Confirmar Contraseña");
+        builder.setTitle("Confirmar contraseña");
         //builder.setMessage("Debe confirmar contraseña para poder generar el PDF");
         builder.setIcon(R.drawable.login);
         builder.setView(subView);
@@ -384,7 +382,7 @@ public class HuberActivity extends AppCompatActivity {
             addHuber();
             Toast.makeText(getApplicationContext(), "PDF Generado Correctamente", Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(this, "Contraseña Incorrecta", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -40,10 +40,10 @@ public class NewtonAdaptador extends RecyclerView.Adapter<NewtonAdaptador.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.vol.setText("Volumen: " +newtonModelList.get(position).getVol());
-        holder.di1.setText("Diametro 1: " + newtonModelList.get(position).getDia1());
-        holder.di2.setText("Diametro 2: " + newtonModelList.get(position).getDia2());
+        holder.di1.setText("Diámetro 1: " + newtonModelList.get(position).getDia1());
+        holder.di2.setText("Diámetro 2: " + newtonModelList.get(position).getDia2());
         holder.lon.setText("Longitud: " + newtonModelList.get(position).getLon());
-        holder.uni.setText("Unidad de Medida: "+ newtonModelList.get(position).getUni());
+        holder.uni.setText("Unidad de medida: "+ newtonModelList.get(position).getUni());
     }
 
     @Override

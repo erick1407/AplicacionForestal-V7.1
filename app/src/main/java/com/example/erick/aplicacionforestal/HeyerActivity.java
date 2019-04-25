@@ -281,7 +281,7 @@ public class HeyerActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Generar PDF");
                 builder.setIcon(R.drawable.pdf);
-                builder.setMessage("¿Desea Generar Archivo PDF de los Resultados?");
+                builder.setMessage("¿Desea generar archivo PDF de los resultados?");
                 builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
@@ -355,8 +355,8 @@ public class HeyerActivity extends AppCompatActivity {
         templatePDF.addParagraph("\n");
         templatePDF.addParagraph("\n");
         templatePDF.addParagraph("\n");
-        templatePDF.addTitles("Método de Heyer", "Cubicación de madera por medio de la regla de Heyer para secciones de diferente longitud. EL número de diámetros debe ser uno más que el de longitudes.", fecha, hora);
-        templatePDF.addParagraph("Cálculos Realizados Por: " + nombreInforme);
+        templatePDF.addTitles("Método de Heyer", "Cubicación de madera por medio de la regla de Heyer para secciones de diferente longitud. El número de diámetros debe ser uno más que el de longitudes.", fecha, hora);
+        templatePDF.addParagraph("Cálculos realizados por: " + nombreInforme);
         templatePDF.createTable(header,getClients());
         templatePDF.addParagraphResu("ATENTAMENTE");
         templatePDF.addParagraphCenter("___________________________________________________________");
@@ -411,7 +411,7 @@ public class HeyerActivity extends AppCompatActivity {
         }
         if (dt > 1 || contadordecomasd > 0) {
             showDialogDiametrosCB();
-            TILdiametros.setError("Usted ha establecido un solo diametro para todas las longitudes");
+            TILdiametros.setError("Usted ha establecido un solo diámetro para todas las longitudes");
         } else {
 
             TILdiametros.setError(null);
@@ -462,7 +462,7 @@ public class HeyerActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Generar PDF");
                 builder.setIcon(R.drawable.pdf);
-                builder.setMessage("¿Desea Generar Archivo PDF de los Resultados?");
+                builder.setMessage("¿Desea generar archivo PDF de los resultados?");
                 builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
@@ -543,7 +543,7 @@ public class HeyerActivity extends AppCompatActivity {
             TILdiametros.setError(null);
         } else {
             showDialogErrorDiametros();
-            TILdiametros.setError("Diametros invalidos");
+            TILdiametros.setError("Diámetros invalidos");
         }
     }//==========================================================================
 
@@ -598,7 +598,7 @@ public class HeyerActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setIcon(R.drawable.warning);
         builder.setTitle("Regresar al Menu");
-        builder.setMessage("¿Desea Regresar al Menu Principal y no Realizar el Cálculo?");
+        builder.setMessage("¿Desea regresar al menu principal y no realizar el cálculo?");
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -630,7 +630,7 @@ public class HeyerActivity extends AppCompatActivity {
         num = editTextNum.getText().toString();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Confirmar Contraseña");
+        builder.setTitle("Confirmar contraseña");
         //builder.setMessage("Debe confirmar contraseña para poder generar el PDF");
         builder.setIcon(R.drawable.login);
         builder.setView(subView);
@@ -661,7 +661,7 @@ public class HeyerActivity extends AppCompatActivity {
             addHeyer();
             Toast.makeText(getApplicationContext(), "PDF Generado Correctamente", Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(this, "Contraseña Incorrecta", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
         }
     }
 

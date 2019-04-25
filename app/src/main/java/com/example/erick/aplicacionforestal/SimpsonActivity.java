@@ -197,7 +197,7 @@ public class SimpsonActivity extends AppCompatActivity {
                     final AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("Generar PDF");
                     builder.setIcon(R.drawable.pdf);
-                    builder.setMessage("¿Desea Generar Archivo PDF de los Resultados?");
+                    builder.setMessage("¿Desea generar archivo PDF de los resultados?");
                     builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
                         @RequiresApi(api = Build.VERSION_CODES.M)
                         @Override
@@ -280,7 +280,7 @@ public class SimpsonActivity extends AppCompatActivity {
         templatePDF.addParagraph("\n");
         templatePDF.addParagraph("\n");
         templatePDF.addTitles("Método de Simpson","Cubicación de madera por medio de la regla de Simpson. El número diámetros debe ser impar.",fecha, hora);
-        templatePDF.addParagraph("Cálculos Realizados Por: " + nombreInforme);
+        templatePDF.addParagraph("Cálculos realizados por: " + nombreInforme);
         templatePDF.createTable(header,getClients());
         templatePDF.addParagraphResu("ATENTAMENTE");
         templatePDF.addParagraphCenter("___________________________________________________________");
@@ -333,7 +333,7 @@ public class SimpsonActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setIcon(R.drawable.warning);
         builder.setTitle("Regresar al Menu");
-        builder.setMessage("¿Desea Regresar al Menu Principal y no Realizar el Cálculo?");
+        builder.setMessage("¿Desea regresar al menu principal y no realizar el cálculo?");
         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -393,7 +393,6 @@ public class SimpsonActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
-                //Toast.makeText(SimpsonActivity.this, "Cancel", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -407,7 +406,7 @@ public class SimpsonActivity extends AppCompatActivity {
             addSim();
             Toast.makeText(getApplicationContext(), "PDF Generado Correctamente", Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(this, "Contraseña Incorrecta", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
         }
     }
 }
