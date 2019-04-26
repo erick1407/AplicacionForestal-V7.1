@@ -55,7 +55,7 @@
             android:label="@string/app_name_phub" />
         <activity
             android:name=".ViewPDFNewtonActivity"
-            android:label="@string/app_name_newton" />
+            android:label="@string/app_name_pnew" />
         <activity
             android:name=".ViewPDFSimpsonActivity"
             android:label="@string/app_name_psim" />
