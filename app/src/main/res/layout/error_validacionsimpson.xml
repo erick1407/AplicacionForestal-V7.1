@@ -70,7 +70,7 @@
                     android:textAlignment="center"
                     android:textSize="18dp"
                     android:textColor="#ffffff"
-                    android:text="Diamentros Incorrectos"/>
+                    android:text="Diámentros Incorrectos"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -81,7 +81,7 @@
                     android:textAlignment="center"
                     android:textStyle="bold"
                     android:textColor="@color/colorText"
-                    android:text="El numero de diametros debe ser impar."
+                    android:text="El numero de diámetros debe ser impar."
                     android:textSize="20sp"/>
 
                 <Button

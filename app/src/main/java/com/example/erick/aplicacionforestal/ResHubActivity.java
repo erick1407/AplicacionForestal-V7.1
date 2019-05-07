@@ -205,10 +205,17 @@ public class ResHubActivity extends AppCompatActivity {
     public void syncSQLiteMySQLDB(){
         //Create AsycHttpClient object
         AsyncHttpClient client = new AsyncHttpClient();
+        //Creamos un requestparams, que es uns asolicitud de parametros que enciaremos en el webservice al servidor
         RequestParams params = new RequestParams();
+        //Creamoas una lista llamada usuarios la cual consulta la tabla Huber instanciada de la clase controller
         ArrayList<HashMap<String, String>> userList =  controller.getAllUsers();
+        //Comparamso si la lista anterior esta vacia mostrara un mensaje de que la tabla esta vacia
         if(userList.size()!=0){
+            //si la lista no esta vacia comporbara los registris de status NO, y obviamente estos ya estaran en el servidor
             if(controller.dbSyncCount() != 0){
+                // si no colocaremos el web service para insertar los registros no sincronizados en el servidor
+                // seguifo la variable params donde su contenido sera una consulta de los registros de la tabla con status no
+                //para mandarlos al servidor
                 prgDialog.show();
                 params.put("usersJSON", controller.composeJSONfromSQLite());
                 client.post(Conexion.URL_WEB_SERVICES+"insertHuber.php", params, new AsyncHttpResponseHandler() {
@@ -223,6 +230,8 @@ public class ResHubActivity extends AppCompatActivity {
                                 JSONObject obj = (JSONObject)arr.get(i);
                                 System.out.println(obj.get("id"));
                                 System.out.println(obj.get("status"));
+                                //con esta linea actualizamod el status despues de sincronizar los regustros con status no
+                                // se actualizaran a si para que no haya redundancia de datos
                                 controller.updateSyncStatus(obj.get("id").toString(),obj.get("status").toString());
                             }
                             Dialog.show(ResHubActivity.this,"Sincronización completada!", "Los datos ya estan en el Servidor", R.drawable.sucess);
@@ -238,18 +247,23 @@ public class ResHubActivity extends AppCompatActivity {
                         // TODO Auto-generated method stub
                         prgDialog.hide();
                         if(statusCode == 404){
+                            //en caso de no encontrar el webservice la aplicacion mostrara
                             Dialog.show(ResHubActivity.this,"Error 404", "Recurso solicitado no encontrado", R.drawable.errorcu);
                         }else if(statusCode == 500){
+                            //Rn caso ue el servidor apacheno este funcionando
                             Dialog.show(ResHubActivity.this,"Error en el Servidor", "Algo anda mal en el Servidor", R.drawable.servererror);
                         }else{
+                            //En caso de que no haya cominicacion entre aplicacion>internet>servidor
                             Dialog.show(ResHubActivity.this, "Error", "¡Ocurrió un error Inesperado!, Tal vez el dispositivo podría no estar conectado a Internet o se perdio la Conexion a Internet", R.drawable.nowifi);
                         }
                     }
                 });
             }else{
+                //Si las bases de datos estan ya sincronizadas
                 Dialog.show(ResHubActivity.this,"Nada para enviar", "No es necesario SQLite y MariaDB ya estan sincronizados!", R.drawable.databasesy);
             }
         }else{
+            //En caso de no haber registros
             Dialog.show(ResHubActivity.this,"No hay registros en SQLite", "Guarde un registro para poder sincronizar", R.drawable.databaseem);
         }
     }

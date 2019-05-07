@@ -31,7 +31,7 @@ public class ViewPDFActivityHuber extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(ViewPDFActivityHuber.this);
         progressDialog.setIcon(R.drawable.pdf);
         progressDialog.setTitle("PDF Generado");
-        progressDialog.setMessage("Se esta guardando su documento espere...!!");
+        progressDialog.setMessage("Se esta guardando su documento espere...!!\nRuta:\nAlmacenamiento interno>PDFCubicacion");
         progressDialog.setMax(100);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progressDialog.setCancelable(false);
