@@ -52,7 +52,7 @@ public class NewtonActivity extends AppCompatActivity {
     String nombreInforme;
     MaterialSpinner spinnerNe;
     private TemplatePDFNewton templatePDF;
-    private String[] header ={"Diámetro 1", "Diámetro 2", "Longitud de la Toza", "Volumen"};
+    private String[] header ={"Diámetro 1", "Diámetro 2", "Longitud de la Troza", "Volumen"};
 
     //Variables Simpson Dialog
     EditText editTextNumN, editTextContraN;

@@ -58,7 +58,7 @@ public class HuberActivity extends AppCompatActivity {
 
     private TemplatePDFHuber templatePDF;
     MaterialSpinner spinnerUnidadesHu;
-    private String[] header ={"Diámetro 1", "Diámetro 2", "Longitud de la Toza", "Volumen"};
+    private String[] header ={"Diámetro 1", "Diámetro 2", "Longitud de la Troza", "Volumen"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
